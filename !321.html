@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>功能介紹頁</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+      color: #333;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #ffffffcc;
+      backdrop-filter: blur(8px);
+      padding: 50px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #2e7d32;
+      margin-bottom: 1.8rem;
+    }
+    p {
+      line-height: 1.9;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    .download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #4caf50;
+      color: white;
+      padding: 16px 36px;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      width: fit-content;
+      margin: 40px auto 0;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #2e7d32;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+        margin: 30px 16px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 功能介紹頁</h1>
+    <p>本專題旨在開發一套基於事件驅動的終端偵測與回應（Endpoint Detection and Response, EDR）即時監控程式，以強化資安防護能力並提高系統安全性。隨著網路攻擊手法日益精進，傳統的防毒軟體或防火牆已不足以應付高階威脅，因此即時監控惡意行為、立即通報並做出相應處置之EDR技術成為現代資安防護的重要趨勢。</p>
+    <p>本系統透過Windows系統內建之事件追蹤機制（Event Tracing for Windows, ETW）以及事件檢視器與Python語言實作後端即時事件監控模組。系統可針對關鍵的Windows事件如登入失敗（Event ID 4625）、帳戶建立（Event ID 4720）、進程創建（Event ID 4688）等進行監控，當偵測到潛在惡意行為時，立即觸發警示通知並紀錄事件詳細資訊，提供資安人員快速回應處理，避免攻擊行為擴散。</p>
+    <p>前端部分則透過html,python開發友善操作介面，以彈跳視窗方式即時提醒管理者異常事件的發生，並結合直觀的操作面板，使管理人員能即時掌握系統的安全狀態。此外，為解決事件監控的效能問題，系統設計上考量了事件篩選及過濾機制，避免不必要的資源浪費，提升系統整體效率。</p>
+    <p>透過本專題的實作，證明了EDR即時監控系統能有效縮短事件發生與偵測的時間間隔，降低資安事件的影響範圍，為企業提供更完善的防護策略，進一步強化現代企業在資安管理上的競爭力。</p>
+    <a href="eventlog_monitor.zip" class="download-btn" download>
+      📥 下載監控程式 (.zip)
+    </a>
+  </div>
+</body>
+</html>
